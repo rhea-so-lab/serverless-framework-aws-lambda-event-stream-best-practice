@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "tsc",
+    "deploy": "serverless deploy"
+  },
+  "dependencies": {
+    "serverless": "3.34.0",
+    "typescript": "5.2.2"
+  }
+}

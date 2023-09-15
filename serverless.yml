@@ -1,0 +1,14 @@
+service: event-stream-test
+
+provider:
+  name: aws
+  region: ap-northeast-2
+  runtime: nodejs18.x
+
+functions:
+  app:
+    handler: dist/index.handler
+    memorySize: 512
+    timeout: 300
+    url:
+      invokeMode: RESPONSE_STREAM # https://docs.aws.amazon.com/ko_kr/lambda/latest/dg/configuration-response-streaming.html

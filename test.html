@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+
+<script>
+  const eventSource = new EventSource(`LAMBDA_FUNCTION_URL`);
+
+  eventSource.onmessage = function (e) {
+    alert(e.data);
+  };
+</script>
+
+</html>
